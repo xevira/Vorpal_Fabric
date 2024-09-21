@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "vorpal",
+	"version": "${version}",
+	"name": "Vorpal",
+	"description": "Allows the dropping of certain mob heads without needing a charged creeper.",
+	"authors": [
+		"xevira"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/vorpal/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.xevira.vorpal.Vorpal"
+		],
+		"client": [
+			"github.xevira.vorpal.VorpalClient"
+		],
+		"fabric-datagen": [
+			"github.xevira.vorpal.VorpalDataGenerator"
+		]
+	},
+	"mixins": [
+		"vorpal.mixins.json",
+		{
+			"config": "vorpal.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
